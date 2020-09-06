@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 var session = require('express-session')
 var MongoDBStore = require('connect-mongodb-session')(session);
 var store = new MongoDBStore({
-    uri: 'mongodb://localhost:27017/myDB2',
+    uri: 'mongodb+srv://myDB2:myDB2@cluster0.23ygs.mongodb.net/myDB2',
     collection: 'mySessions'
   });
 var multer = require('multer')
@@ -25,7 +25,7 @@ const indexRoute = require('./routes/index.routes')
 app.use(indexRoute);
 
 
-mongoose.connect("mongodb://localhost:27017/myDB2", { useNewUrlParser: true, useUnifiedTopology: true });
-app.listen(3000, () => {
+mongoose.connect("mongodb+srv://myDB2:myDB2@cluster0.23ygs.mongodb.net/myDB2", { useNewUrlParser: true, useUnifiedTopology: true });
+app.listen(process.env.PORT|| 3000, () => {
     console.log('server is running now......')
 })
