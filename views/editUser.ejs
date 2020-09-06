@@ -1,0 +1,34 @@
+<%- include('./header.ejs') %>
+<div class="container">
+<div class="row">
+        <div class="col-md-6 text-center pt-5">
+        <img src="/images/team-1.jpg" class="UserImg"  alt="user-img">
+    </div>
+
+    <div class="col-md-6 mt-5 m-auto text-white ">
+   
+        <h1 class="text-center my-1 mb-4"><i class="fas fa-edit edit-button "></i> Edit User</h1>
+        <form action="/UpdatedUser/<%= userData.id %> " method="POST">
+          <div class="form-group">
+            <input placeholder="Type name" value="<%= userData.name %>" name="name" class="form-control" type="text">    
+          </div>
+          <div class="form-group">
+            <input placeholder="Type email" value="<%= userData.email %>" name="email" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <input placeholder="Type Password" value="" name="password" class="form-control" type="password">
+          </div>
+            <div class="float-right">
+                    <a href="/home"><button type="button" class="btn btn-secondary" >Back</button></a>
+                   <button type="submit" class="btn btn-info "><i class="fas fa-edit  "></i> Update User</button>
+            </div>
+           
+    
+     
+        </form>
+    </div>
+</div>
+
+</div>
+
+<%- include('./footer.ejs') %>

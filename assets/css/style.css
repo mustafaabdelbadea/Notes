@@ -1,0 +1,87 @@
+body {
+    min-width: 100vh;
+    background: #203a43;
+}
+/* body {
+    background-color:#EAF2E3;
+  } */
+nav {
+    background-color: #0f2027;
+    box-shadow: 0px 23px 93px 1px rgba(0, 0, 0, 0.75);
+}
+
+nav a {
+    transition: all 0.3s;
+
+}
+
+.add {
+    font-family: 'Source Sans Pro', sans-serif;
+    /* background-color: #fff; */
+    font-size: 20px;
+    transition: 0.2s;
+    color: #fff;
+    box-shadow: 0px 23px 93px 1px rgba(0, 0, 0, 0.75);
+
+}
+
+.add:hover {
+    background-color: #8BC34A;
+    color: #fff;
+}
+.note
+{
+    background: linear-gradient(#F9EFAF, #F7E98D);
+    transition: all 0.3s;
+
+}
+.note:hover{
+    box-shadow: 0px 23px 93px 1px rgba(0, 0, 0, 0.75);
+
+}
+.note a{
+    color:black;
+    font-size: 23px;
+    
+}
+.note i 
+{
+    transition: all 0.3s;
+
+}
+.del:hover {
+    color: #F44336;
+    transform: rotate(-110deg);
+}
+.edit:hover {
+    color: #07f542;
+    transform: rotate(-50deg);
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.edit-button {
+    animation:spin 1s linear 1;
+    color: #F7E98D;
+}
+
+.drop-down-img{
+    width: 50px;
+    border-radius:50% ;
+     border:solid rgb(193, 247, 111) 2px;
+}
+.profile-img{
+    width: 70px;
+    border-radius:50% ;
+     border:solid transparent
+      4px;
+}
+.dropdown-item-setting:hover{
+background-color: #d9d9db !important;
+} 
+.dropdown-item-logout:hover{
+    background-color: rgb(248, 78, 78) !important;
+}
+.UserImg{
+    width:400px;
+}

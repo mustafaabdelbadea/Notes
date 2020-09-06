@@ -1,0 +1,17 @@
+<%- include('./header.ejs') %>
+
+<div class="col-md-8 mt-5 m-auto text-white">
+    <h1 class="text-center my-5"><i class="fas fa-edit edit-button "></i> Edit Note</h1>
+    <form action="/UpdatedNote/<%= NoteData.id %> " method="POST">
+
+    <input placeholder="Type Title" value="<%= NoteData.title %> " name="title" class="form-control" type="text">
+    <textarea class="form-control my-2" placeholder="Type your note" name="desc" id="" cols="30"
+    rows="10"><%= NoteData.desc %> </textarea>
+    <div class="float-right">
+           <a href="/home"><button type="button" class="btn btn-secondary" >Back</button></a>
+    <button type="submit" class="btn btn-info "><i class="fas fa-edit  "></i> Update Note</button>
+</div>
+ 
+    </form>
+</div>
+<%- include('./footer.ejs') %>

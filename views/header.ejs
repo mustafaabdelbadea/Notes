@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/paper.png" />
+  <title>Notes </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/home"><i class="fa fa-sticky-note" aria-hidden="true"></i> Notes</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+     
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+
+
+          <% if (!isLoggedIn) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">SignIn</a>
+          </li>
+          <% } %>
+          <% if (isLoggedIn) { %>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li> -->
+
+
+
+          <div class="dropdown text-center">
+            <img src="/images/team-1.jpg" class="drop-down-img "  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="image">
+            <div class="d-flex justify-content-center text-center"> 
+              <div class="dropdown-menu text-center align-items-center" aria-labelledby="dropdownMenuButton">
+              <li>
+                <img src="/images/team-1.jpg" class="profile-img" alt="">
+              </li>
+              <li class="nav-item">
+                <h5><%= pageTitle %> </h5>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item nav-link dropdown-item-setting text-dark" href="/editUser/<%= userData.id %> ">Setting</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item  nav-link text-dark dropdown-item-logout" href="/logout">Logout</a>
+              </li>
+            
+            </div>
+          </div>
+
+           
+          </div>
+          <% } %>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
